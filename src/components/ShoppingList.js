@@ -1,5 +1,7 @@
 import { plantList } from '../datas/plantList'
+import PlantItem from './PlantItem'
 import '../styles/ShoppingList.css'
+
 
 function ShoppingList() {
 
@@ -10,20 +12,23 @@ function ShoppingList() {
       )
       return (
             <div>
-                  {/* <ul>
+                  <ul>
                       {categories.map((cat) => (
                                 <li key={cat}>{cat}</li>
                       ))}
-                  </ul> */}
+                  </ul>
                   <ul className='lmj-plant-list'>
-                      {plantList.map((plant) => (
-                                <li key={plant.id} className='lmj-plant-item'>
-                                        {plant.name}
-                                        {plant.isSpecialOffer && <div className='lmj-sales'>Soldes</div>}
-                                </li>
+                      {plantList.map(({ id, cover, name, water, light }) => (
+                                <PlantItem
+                                        id={id}
+                                        cover={cover}
+                                        name={name}
+                                        water={water}
+                                        light={light}
+                            />
                       ))}
                   </ul>
-              </div>
+            </div>
       )
 }
 
