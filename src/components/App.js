@@ -2,7 +2,7 @@ import Banner from './Banner'
 // import Cart from './Cart'
 import ShoppingList from './ShoppingList'
 import logo from '../assets/logo.png'
-import handleSubmit from './QuestionForm'
+import QuestionForm from './QuestionForm'
 
 function App() {
     return (
@@ -12,7 +12,7 @@ function App() {
             <h1 className='lmj-title'>La maison jungle</h1>
           </Banner>
           {/*<Cart /> */}
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={QuestionForm}>
                   <input type='text' name='my_input' defaultValue='Tapez votre texte' />
                   <button type='submit'>Entrer</button>
               </form>
